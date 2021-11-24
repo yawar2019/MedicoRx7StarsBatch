@@ -7,10 +7,9 @@ using System.Web;
 
 namespace MedicoRx7StarsBatch.Models
 {
-    public class MasterContext
+    public static class MasterContext
     {
-        public static class EmployeeContext
-        {
+       
             public static IEnumerable<T> ReturnList<T>(string spName, DynamicParameters param)
             {
                 SqlConnection con = new SqlConnection("Data Source=AZAM-PC\\SQLEXPRESS;Initial Catalog=Employee;Integrated Security=true");
@@ -23,5 +22,4 @@ namespace MedicoRx7StarsBatch.Models
                 return result;
             }
         }
-    }
 }
